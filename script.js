@@ -40,13 +40,13 @@ function exportQuestions() {
     var exportedText = "";
 
     for (var i = 0; i < questions.length; i++) {
-        var question = questions[i].querySelector("input[name='question']").value;
-        var answer = questions[i].querySelector("input[name='answer']").value;
+        var question = questions[i].querySelector("input[name='question']");
+        var answer = questions[i].querySelector("input[name='answer']");
 
-        exportedText += "m " + question + "\n";
-        exportedText += "m " + answer + "\n";
-        exportedText += "pm " + question + "\n";
-        exportedText += "pm " + answer + "\n";
+        exportedText += "m " + (question ? question.value : "") + "\n";
+        exportedText += "m " + (answer ? answer.value : "") + "\n";
+        exportedText += "pm " + (question ? question.value : "") + "\n";
+        exportedText += "pm " + (answer ? answer.value : "") + "\n";
     }
 
     console.log(exportedText);
