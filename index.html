@@ -76,12 +76,11 @@
 
     // Repeat the above structure for remaining groups
 
-    const button = document.getElementById("exportBtn").innerHTML = "Exportálás folyamatban...";
+    document.getElementById("exportBtn").innerHTML = "Exportálás folyamatban...";
     setTimeout(function(){
       document.getElementById("export").innerHTML = exportedText;
       document.getElementById("exported-title").style.display = 'block';
       const button = document.getElementById("exportBtn").innerHTML = "Exportálva!";
-      window.location.href = 'index.html#export';
       setTimeout(function(){
         document.getElementById("exportBtn").innerHTML = "Exportálás";
       }, 2000)
