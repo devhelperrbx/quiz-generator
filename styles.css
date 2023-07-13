@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,228,196,1) 52%, rgba(255,255,255,1) 100%);
+}
+
+* {
+    display: grid;
+    justify-content: center;
+}
+
+input {
+    width: 500px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: large;
+}
+
+.kerdes {
+    background-color: #f5f5dc;
+    border-color: #000000;
+    border-width: 0.5px;
+}
+
+.valasz {
+    background-color: #fefe8f;
+    border-color: #000000;
+    border-width: 0.5px;
+}
+
+#question-form {
+    background-color: burlywood;
+    margin: 0px 450px 0px 450px;
+    box-shadow: #000000;
+    box-shadow: 1px 2px 13px 5px rgba(0,0,0,0.73);
+    border-radius: 20px;
+}
+
+#exportBtn {
+    margin: 30px 0px 30px 0px;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    display: grid;
+    justify-self: center;
+    background-color: #fefe8f;
+    border-radius: 15px;
+    font-size: large;
+    /*box-shadow: 1px 2px 13px 5px rgba(0,0,0,0.73);*/
+    border-color: #000000;
+    border-width: 0.5px;
+}
+
+#exportBtn:hover {
+    cursor: pointer;
+    background-color: #949456;
+    color: #ffffff;
+    font-weight: bold;
+}

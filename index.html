@@ -2,43 +2,44 @@
 <html>
 <head>
   <title>BAE Kvíz Generátor</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Basic Admin Essentials Kvíz Generátor by LevikeAuthority</h1>
   <form id="question-form">
-    <h2>1. Csoport</h2>
+    <h2 class="title">1. Csoport</h2>
     <p>Kérdés:</p>
-    <input type="text" id="q1">
+    <input type="text" id="q1" class="kerdes">
     <p>Válasz:</p>
-    <input type="text" id="a1">
+    <input type="text" id="a1" class="valasz">
 
-    <h2>2. Csoport</h2>
+    <h2 class="title">2. Csoport</h2>
     <p>Kérdés:</p>
-    <input type="text" id="q2">
+    <input type="text" id="q2" class="kerdes">
     <p>Válasz:</p>
-    <input type="text" id="a2">
+    <input type="text" id="a2" class="valasz">
 
-    <h2>3. Csoport</h2>
+    <h2 class="title">3. Csoport</h2>
     <p>Kérdés:</p>
-    <input type="text" id="q3">
+    <input type="text" id="q3" class="kerdes">
     <p>Válasz:</p>
-    <input type="text" id="a3">
+    <input type="text" id="a3" class="valasz">
 
-    <h2>4. Csoport</h2>
+    <h2 class="title">4. Csoport</h2>
     <p>Kérdés:</p>
-    <input type="text" id="q4">
+    <input type="text" id="q4" class="kerdes">
     <p>Válasz:</p>
-    <input type="text" id="a4">
+    <input type="text" id="a4" class="valasz">
 
-    <h2>5. Csoport</h2>
+    <h2 class="title">5. Csoport</h2>
     <p>Kérdés:</p>
-    <input type="text" id="q5">
+    <input type="text" id="q5" class="kerdes">
     <p>Válasz:</p>
-    <input type="text" id="a5">
+    <input type="text" id="a5" class="valasz">
 
     <!-- Repeat the above structure for remaining groups -->
     <br>
-    <button type="button" onclick="exportAnswers()">Exportálás</button>
+    <button type="button" onclick="exportAnswers()" id="exportBtn">Exportálás</button>
   </form>
 
   <h2 id="exported-title" style="display: none;">Exportált Parancsok:</h2>
@@ -46,38 +47,38 @@
 
   <script>
     function exportAnswers() {
-      var exportedText = "";
+    var exportedText = "";
 
-      // Group 1
-      var q1 = document.getElementById("q1").value;
-      var a1 = document.getElementById("a1").value;
-      exportedText += ":m " + q1 + "<br>" + ":pm %c" + q1 + "<br>" + ":m " + a1 + "<br>" + "<br>";
+    // Group 1
+    var q1 = document.getElementById("q1").value;
+    var a1 = document.getElementById("a1").value;
+    exportedText += ":m " + q1 + "<br>" + ":pm %c " + q1 + "<br>" + ":m " + a1 + "<br>" + "<br>";
 
-      // Group 2
-      var q2 = document.getElementById("q2").value;
-      var a2 = document.getElementById("a2").value;
-      exportedText += ":m " + q2 + "<br>" + ":pm %c" + q2 + "<br>" + ":m " + a2 + "<br>" + "<br>";
+    // Group 2
+    var q2 = document.getElementById("q2").value;
+    var a2 = document.getElementById("a2").value;
+    exportedText += ":m " + q2 + "<br>" + ":pm %c " + q2 + "<br>" + ":m " + a2 + "<br>" + "<br>";
 
-      // Group 3
-      var q3 = document.getElementById("q3").value;
-      var a3 = document.getElementById("a3").value;
-      exportedText += ":m " + q3 + "<br>" + ":pm %c" + q3 + "<br>" + ":m " + a3 + "<br>" + "<br>";
+    // Group 3
+    var q3 = document.getElementById("q3").value;
+    var a3 = document.getElementById("a3").value;
+    exportedText += ":m " + q3 + "<br>" + ":pm %c " + q3 + "<br>" + ":m " + a3 + "<br>" + "<br>";
 
-      // Group 4
-      var q4 = document.getElementById("q4").value;
-      var a4 = document.getElementById("q4").value;
-      exportedText += ":m " + q4 + "<br>" + ":pm %c" + q4 + "<br>" + ":m " + a4 + "<br>" + "<br>";
+    // Group 4
+    var q4 = document.getElementById("q4").value;
+    var a4 = document.getElementById("q4").value;
+    exportedText += ":m " + q4 + "<br>" + ":pm %c " + q4 + "<br>" + ":m " + a4 + "<br>" + "<br>";
 
-      // Group 5
-      var q5 = document.getElementById("q5").value;
-      var a5 = document.getElementById("a5").value;
-      exportedText += ":m " + q5 + "<br>" + ":pm %c" + q5 + "<br>" + ":m " + a5 + "<br>" + "<br>";
+    // Group 5
+    var q5 = document.getElementById("q5").value;
+    var a5 = document.getElementById("a5").value;
+    exportedText += ":m " + q5 + "<br>" + ":pm %c " + q5 + "<br>" + ":m " + a5 + "<br>" + "<br>";
 
-      // Repeat the above structure for remaining groups
+    // Repeat the above structure for remaining groups
 
-      document.getElementById("export").innerHTML = exportedText;
-      document.getElementById("exported-title").style.display = 'block';
-    }
+    document.getElementById("export").innerHTML = exportedText;
+    document.getElementById("exported-title").style.display = 'block';
+  }
   </script>
 </body>
 </html>
