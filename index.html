@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Questionnaire</title>
+  <title>BAE Kvíz Generátor</title>
 </head>
 <body>
-  <h1>Questionnaire</h1>
+  <h1>Basic Admin Essentials Kvíz Generátor by LevikeAuthority</h1>
   <form id="question-form">
-    <h2>Group 1</h2>
-    <p>Question 1:</p>
+    <h2>1. Csoport</h2>
+    <p>Kérdés:</p>
     <input type="text" id="q1">
-    <p>Answer 1:</p>
+    <p>Válasz:</p>
     <input type="text" id="a1">
 
-    <h2>Group 2</h2>
-    <p>Question 2:</p>
+    <h2>2. Csoport</h2>
+    <p>Kérdés:</p>
     <input type="text" id="q2">
-    <p>Answer 2:</p>
+    <p>Válasz:</p>
     <input type="text" id="a2">
+
+    <h2>3. Csoport</h2>
+    <p>Kérdés:</p>
+    <input type="text" id="q3">
+    <p>Válasz:</p>
+    <input type="text" id="a3">
+
+    <h2>4. Csoport</h2>
+    <p>Kérdés:</p>
+    <input type="text" id="q4">
+    <p>Válasz:</p>
+    <input type="text" id="a4">
+
+    <h2>5. Csoport</h2>
+    <p>Kérdés:</p>
+    <input type="text" id="q5">
+    <p>Válasz:</p>
+    <input type="text" id="a5">
 
     <!-- Repeat the above structure for remaining groups -->
 
@@ -33,12 +51,12 @@
       // Group 1
       var q1 = document.getElementById("q1").value;
       var a1 = document.getElementById("a1").value;
-      exportedText += ":m " + q1 + ":pm " + q1 + ":m " + a1 + "<br>";
+      exportedText += ":m " + q1 + "<br>" + ":pm " + q1 + "<br>" + ":m " + a1 + "<br>" + "<br>";
 
       // Group 2
       var q2 = document.getElementById("q2").value;
       var a2 = document.getElementById("a2").value;
-      exportedText += ":m " + q2 + ":pm " + q2 + ":m " + a2 + "<br>";
+      exportedText += ":m " + q2 + "<br>" + ":pm " + q2 + "<br>" + ":m " + a2 + "<br>" + "<br>";
 
       // Repeat the above structure for remaining groups
 
