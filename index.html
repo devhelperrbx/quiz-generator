@@ -37,12 +37,12 @@
     <input type="text" id="a5">
 
     <!-- Repeat the above structure for remaining groups -->
-
-    <button type="button" onclick="exportAnswers()">Submit</button>
+    <br>
+    <button type="button" onclick="exportAnswers()">Exportálás</button>
   </form>
 
-  <h2>Exported Answers</h2>
-  <p id="exported-answers"></p>
+  <h2 id="exported-title" style="display: none;">Exported Answers</h2>
+  <p id="export"></p>
 
   <script>
     function exportAnswers() {
@@ -75,7 +75,8 @@
 
       // Repeat the above structure for remaining groups
 
-      document.getElementById("exported-answers").innerHTML = exportedText;
+      document.getElementById("export").innerHTML = exportedText;
+      document.getElementById("exported-title").style.display = 'block';
     }
   </script>
 </body>
